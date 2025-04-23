@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6l6tcylurcvn"]
+
+[ext_resource type="PackedScene" path="res://StarParticles.tscn" id="2"]
+[ext_resource type="Script" uid="uid://cjqf7nqh3uy00" path="res://StartMenu.gd" id="3"]
+[ext_resource type="PackedScene" path="res://Music.tscn" id="4"]
+
+[node name="StartMenu" type="Node"]
+script = ExtResource("3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+text = "Press Space to Start"
+
+[node name="StarParticles" parent="." instance=ExtResource("2")]
+position = Vector2(321, 87)
+
+[node name="Music" parent="." instance=ExtResource("4")]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

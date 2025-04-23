@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1745418259
+Bullet.gd::GDScript::3876595983431133617::1671417880::0::1::::<>Area2D<><>0<>0<><>::
+Bullet.png::CompressedTexture2D::2976238291019211367::1671417880::1745418259::1::::<><><>0<>0<>afac2ee05cb01bdb250c2d9c724658d6<>res://.godot/imported/Bullet.png-8556c7b1165e553b17f4d76e597a3ac5.ctex::
+Bullet.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Bullet.png<>res://Bullet.gd<>res://Laser.wav
+default_env.tres::Environment::-1::1671417880::0::1::::<><><>0<>0<><>::
+Enemy.gd::GDScript::7519828886174509642::1671417880::0::1::::<>Area2D<><>0<>0<><>::
+Enemy.png::CompressedTexture2D::9014795954352226895::1671417880::1745418259::1::::<><><>0<>0<>5cb4c6d72bcae0aac78daba8b3ca621c<>res://.godot/imported/Enemy.png-b2aedbdcb836f57d2b30bf9e08439a5a.ctex::
+Enemy.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Enemy.png<>res://Enemy.gd
+EnemySpawner.gd::GDScript::8802119045745742269::1671417880::0::1::::<>Node2D<><>0<>0<><>::
+EnemySpawner.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://EnemySpawner.gd
+Explode.wav::AudioStreamWAV::7350927026717122310::1671417880::1745418259::1::::<><><>0<>0<>814b08220e8022cbe0f23a3d256bbaca<>res://.godot/imported/Explode.wav-78b3e12696a820b2a0919911087b2317.sample::
+Explosion.png::CompressedTexture2D::5094710081167649968::1671417880::1745418259::1::::<><><>0<>0<>db674cea71a07ca4e0a1ddf2e4e9f382<>res://.godot/imported/Explosion.png-4612df08f235a862d469eaefd49882a2.ctex::
+ExplosionEffect.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Explosion.png<>res://Hit.wav
+export_presets.cfg::TextFile::-1::1671417880::0::1::::<><><>0<>0<><>::
+GameOverScene.gd::GDScript::5486132057963379759::1671417880::0::1::::<>Node<><>0<>0<><>::
+GameOverScene.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://StarParticles.tscn<>res://PixelRPG.ttf<>res://GameOverScene.gd
+Hit.wav::AudioStreamWAV::1289945806260778486::1671417880::1745418259::1::::<><><>0<>0<>e9dde40034e8f1866c6c2d618286bc5a<>res://.godot/imported/Hit.wav-89871fcfccd59136b6be8bbafd26dd1b.sample::
+HitEffect.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Hit.wav
+icon.png::CompressedTexture2D::437717116506136192::1671417880::1745418259::1::::<><><>0<>0<>fc20c3b144346a0ca78c4226e1e58f9a<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+Laser.wav::AudioStreamWAV::5172707100543304821::1671417880::1745418259::1::::<><><>0<>0<>61b649dbc2c9df423e3c25b3cbf13896<>res://.godot/imported/Laser.wav-f990c046cc0c35e8b7b5e20451e6933b.sample::
+Music.ogg::AudioStreamOggVorbis::3980593974708257162::1671417880::1745418259::1::::<><><>0<>0<>aec92f6804ff86c8d8d49bc5589f6be6<>res://.godot/imported/Music.ogg-b09e5d9107290d036ff2cdf53e7bf57f.oggvorbisstr::
+Music.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Music.ogg
+PixelRPG.ttf::FontFile::9028822221373717442::1671417880::1745418259::1::::<><><>0<>0<>5abe469828538da7ac30c58a965ca919<>res://.godot/imported/PixelRPG.ttf-0a848f7cd51639fcb4041987c4c12983.fontdata::
+SaveAndLoad.gd::GDScript::2828937577309942659::1671417880::0::1::::<>Node<><>0<>0<><>::
+save_data.json::JSON::-1::1671417880::0::1::::<><><>0<>0<><>::
+Ship.gd::GDScript::979889223083901592::1671417880::0::1::::<>Area2D<><>0<>0<><>::
+Ship.png::CompressedTexture2D::908070455956408988::1671417880::1745418259::1::::<><><>0<>0<>0e1d5ae63d671b73db8183855ef2b9d0<>res://.godot/imported/Ship.png-5c093b8dbd5927776a227b60e1b26f17.ctex::
+Ship.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Ship.png<>res://Ship.gd
+ShipHit.wav::AudioStreamWAV::156319931186684776::1671417880::1745418259::1::::<><><>0<>0<>c3950057fa191dcbfaa2b88c39c20046<>res://.godot/imported/ShipHit.wav-f8ea01cb2d42cd4bfefaef4dd273cf13.sample::
+Space Shooter.apple-touch-icon.png::CompressedTexture2D::5250120819946730080::1671417880::1745418259::1::::<><><>0<>0<>0bc30f91589a193c8579856f1a054dbf<>res://.godot/imported/Space Shooter.apple-touch-icon.png-5c4c802038dd8df8784435eb1cb17543.ctex::
+Space Shooter.icon.png::CompressedTexture2D::4152044988837767408::1671417880::1745418259::1::::<><><>0<>0<>718926af92df825ee9b28cd108eece67<>res://.godot/imported/Space Shooter.icon.png-7abcf1c9aa0909a10a9b90db3ab26ea6.ctex::
+Space Shooter.png::CompressedTexture2D::1342587028564390460::1671417880::1745418259::1::::<><><>0<>0<>af547fc8f876fbb374f7d246a4f9d51d<>res://.godot/imported/Space Shooter.png-33dc532e253f499f9ee7fc29c70e35ed.ctex::
+StarParticles.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::
+StartMenu.gd::GDScript::5437932442438941579::1671417880::0::1::::<>Node<><>0<>0<><>::
+StartMenu.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://PixelRPG.ttf<>res://StarParticles.tscn<>res://StartMenu.gd<>res://Music.tscn
+World.gd::GDScript::7707309739344587116::1671417880::0::1::::<>Node<><>0<>0<><>::
+World.tscn::PackedScene::-1::1671417880::0::1::::<><><>0<>0<><>::res://Ship.tscn<>res://World.gd<>res://EnemySpawner.tscn<>res://StarParticles.tscn<>res://PixelRPG.ttf

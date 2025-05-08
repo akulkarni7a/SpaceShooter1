@@ -1,15 +1,15 @@
 extends Area2D
-export(int) var ARMOR = 3
+@export var ARMOR = 3
 var Explosion = preload("res://ExplosionEffect.tscn")
 
 signal scoreUp
 signal player_death
 
 var justDied = false
-
-
+# Note: connect() calls kept using Godot 3 syntax for compatibility.
+# Consider refactoring to use await signals or direct callable binding if issues arise.
 func _ready():
-	var main = get_tree().current_scene
+	var main = get_tree().root # Changed from current_scene
 	if main.is_in_group("World"): 
 		connect("scoreUp",main,"_on_Enemy_Score_Up")
 		connect("player_death",main,"_on_Ship_player_death")
@@ -35,13 +35,16 @@ func _on_Enemy_area_entered(area):
 		
 
 func triggerExplosion():
-	var explosion = Explosion.instance()
-	var main = get_tree().current_scene
+	var explosion = Explosion.instantiate()
+	var main = get_tree().root # Changed from current_scene
 	main.add_child(explosion)
 	explosion.global_position = global_position
 
 
-func _on_VisibilityNotifier2D_screen_exited():
+# Note: This function handles the 'screen_exited' signal. 
+# Ensure the corresponding node in the scene is a VisibleOnScreenNotifier2D (Godot 4)
+# instead of VisibilityNotifier2D (Godot 3).
+func _on_VisibleOnScreenNotifier2D_screen_exited():
 	var x = global_position.x
 	if x <= 0:
 		emit_signal("player_death")

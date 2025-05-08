@@ -1,6 +1,6 @@
 extends Area2D
 
-export(int) var SPEED = 100
+@export var SPEED = 100
 const Bullet = preload("res://Bullet.tscn")
 var HitEffect = preload("res://HitEffect.tscn")
 const ExplosionEffect = preload("res://ExplosionEffect.tscn")
@@ -20,14 +20,14 @@ func _process(delta):
 		fireBullet()
 	
 func fireBullet():
-	var bullet = Bullet.instance()
-	var main = get_tree().current_scene
+	var bullet = Bullet.instantiate()
+	var main = get_tree().root # Changed from current_scene
 	main.add_child(bullet)
 	bullet.global_position = global_position
 
 func triggerExplosionEffect():
-	var explosion = ExplosionEffect.instance()
-	var main = get_tree().current_scene
+	var explosion = ExplosionEffect.instantiate()
+	var main = get_tree().root # Changed from current_scene
 	main.add_child(explosion)
 	explosion.global_position = global_position
 

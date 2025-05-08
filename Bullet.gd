@@ -17,6 +17,6 @@ func _process(delta):
 
 func createHitEffect():
 	var hitEffect = HitEffect.instantiate()
-	var main = get_tree().root # Changed from current_scene
+	var main = get_tree().get_current_scene()
 	main.add_child(hitEffect)
 	hitEffect.global_position = global_position

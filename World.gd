@@ -1,15 +1,20 @@
 extends Node
 
-var score = 0: set = setScore
-@onready var scoreLabel = $ScoreLabel
+var scoreLabel
+var score = 0 : set = set_score
 
-func setScore(value):
+func set_score(value):
 	score = value
-	scoreLabel.text = "Score: "+str(score)
+	if scoreLabel: # Check if scoreLabel is initialized
+		scoreLabel.text = "Score: "+str(score)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	scoreLabel = $ScoreLabel
+	# Initialize scoreLabel text if score was set before _ready
+	if scoreLabel:
+		scoreLabel.text = "Score: "+str(score)
+
 
 func _on_Enemy_Score_Up():
 	self.score += 10
@@ -25,7 +30,7 @@ func updateSaveData():
 func _on_Ship_player_death():
 	updateSaveData()
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://GameOverScene.tscn")
+	get_tree().change_scene("res://GameOverScene.tscn")
 
 
 

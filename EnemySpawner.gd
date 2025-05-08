@@ -1,7 +1,10 @@
 extends Node2D
 
 const Enemy = preload("res://Enemy.tscn")
-onready var spawnPoints = $SpawnPoints
+var spawnPoints
+
+func _ready():
+	spawnPoints = $SpawnPoints
 
 func getSpawnPoints():
 	var points = spawnPoints.get_children()
@@ -12,8 +15,8 @@ func getSpawnPoints():
 	
 func spawnEnemy():
 	var spawn_position = getSpawnPoints()
-	var enemy = Enemy.instance()
-	var main = get_tree().current_scene
+	var enemy = Enemy.instantiate()
+	var main = get_tree().get_current_scene()
 	main.add_child(enemy)
 	enemy.global_position = spawn_position
 	

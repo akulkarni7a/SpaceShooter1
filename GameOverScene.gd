@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene("res://World.tscn")
+		get_tree().change_scene_to_file("res://World.tscn")
 
 func set_highScore_label():
 	var save_data = SaveAndLoad.load_data_from_file()

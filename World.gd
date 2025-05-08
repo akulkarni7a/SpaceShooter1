@@ -30,7 +30,7 @@ func updateSaveData():
 func _on_Ship_player_death():
 	updateSaveData()
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene("res://GameOverScene.tscn")
+	get_tree().change_scene_to_file("res://GameOverScene.tscn")
 
 
 

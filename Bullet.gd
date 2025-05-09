@@ -16,7 +16,7 @@ func _process(delta):
 	position.x += (100 * delta)
 
 func createHitEffect():
-	var hitEffect = HitEffect.instance()
-	var main = get_tree().current_scene
+	var hitEffect = HitEffect.instantiate()
+	var main = get_tree().root
 	main.add_child(hitEffect)
 	hitEffect.global_position = global_position

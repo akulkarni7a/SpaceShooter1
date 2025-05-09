@@ -1,8 +1,8 @@
 extends Area2D
 
-export(int) var SPEED = 100
+@export var SPEED: int = 100
 const Bullet = preload("res://Bullet.tscn")
-var HitEffect = preload("res://HitEffect.tscn")
+var HitEffect = preload("res://HitEffect.tscn") # This was not in the instructions to change, but likely should be const
 const ExplosionEffect = preload("res://ExplosionEffect.tscn")
 
 signal player_death
@@ -20,14 +20,14 @@ func _process(delta):
 		fireBullet()
 	
 func fireBullet():
-	var bullet = Bullet.instance()
-	var main = get_tree().current_scene
+	var bullet = Bullet.instantiate()
+	var main = get_tree().get_root().get_child(get_tree().get_root().get_child_count() - 1)
 	main.add_child(bullet)
 	bullet.global_position = global_position
 
 func triggerExplosionEffect():
-	var explosion = ExplosionEffect.instance()
-	var main = get_tree().current_scene
+	var explosion = ExplosionEffect.instantiate()
+	var main = get_tree().get_root().get_child(get_tree().get_root().get_child_count() - 1)
 	main.add_child(explosion)
 	explosion.global_position = global_position
 
@@ -39,4 +39,3 @@ func _on_Ship_area_entered(area):
 		area.queue_free()
 		queue_free()
 		emit_signal("player_death")
-		

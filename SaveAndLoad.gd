@@ -7,19 +7,25 @@ var default_save_data = {
 }
 
 func save_data_to_file(save_data):
-	var json_string = to_json(save_data)
-	var save_file = File.new()
-	save_file.open(SAVE_DATA_PATH, File.WRITE)
-	save_file.store_line(json_string)
-	save_file.close()
+	var json_string = JSON.stringify(save_data)
+	var save_file = FileAccess.open(SAVE_DATA_PATH, FileAccess.WRITE)
+	if save_file: # Check if the file was opened successfully
+		save_file.store_line(json_string)
+		save_file.close()
+	else:
+		printerr("Error: Could not open file for writing: ", SAVE_DATA_PATH)
+
 
 func load_data_from_file():
-	var save_file = File.new()
-	if not save_file.file_exists(SAVE_DATA_PATH):
+	if not FileAccess.file_exists(SAVE_DATA_PATH):
 		return default_save_data
 	#does exist
 	
-	save_file.open(SAVE_DATA_PATH,File.READ)
-	var save_data = parse_json(save_file.get_as_text())
-	save_file.close()
-	return save_data
+	var save_file = FileAccess.open(SAVE_DATA_PATH, FileAccess.READ)
+	if save_file: # Check if the file was opened successfully
+		var save_data = JSON.parse_string(save_file.get_as_text())
+		save_file.close()
+		return save_data
+	else:
+		printerr("Error: Could not open file for reading: ", SAVE_DATA_PATH)
+		return default_save_data

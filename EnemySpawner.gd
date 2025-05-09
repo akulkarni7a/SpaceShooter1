@@ -1,19 +1,20 @@
 extends Node2D
 
 const Enemy = preload("res://Enemy.tscn")
-onready var spawnPoints = $SpawnPoints
+@onready var spawnPoints = $SpawnPoints
 
 func getSpawnPoints():
 	var points = spawnPoints.get_children()
-	randomize()
+	# randomize() is deprecated and no longer needed for basic randomization.
+	# The random number generator is seeded automatically.
 	points.shuffle()
 	print(points[0].global_position)
 	return points[0].global_position
 	
 func spawnEnemy():
 	var spawn_position = getSpawnPoints()
-	var enemy = Enemy.instance()
-	var main = get_tree().current_scene
+	var enemy = Enemy.instantiate()
+	var main = get_tree().root
 	main.add_child(enemy)
 	enemy.global_position = spawn_position
 	
